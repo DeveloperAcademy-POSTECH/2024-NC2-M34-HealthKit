@@ -16,6 +16,8 @@
 		98E64EC82C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */; };
 		98E64ECA2C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */; };
 		98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */; };
+		98E64EE02C200273004CE8A2 /* exerciseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EDF2C200273004CE8A2 /* exerciseData.swift */; };
+		98E64EE22C2002DE004CE8A2 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hitBeat Watch App.entitlements"; sourceTree = "<group>"; };
 		98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		98E64EDF2C200273004CE8A2 /* exerciseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exerciseData.swift; sourceTree = "<group>"; };
+		98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +127,9 @@
 			children = (
 				98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */,
 				98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */,
-				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
-				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
 				98E64EB02C1FF878004CE8A2 /* Assets.xcassets */,
+				98E64EDE2C200267004CE8A2 /* Data */,
+				98E64EDD2C20025B004CE8A2 /* View */,
 				98E64EB22C1FF878004CE8A2 /* Preview Content */,
 			);
 			path = "hitBeat Watch App";
@@ -154,6 +158,24 @@
 				98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "hitBeat Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		98E64EDD2C20025B004CE8A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
+				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
+				98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98E64EDE2C200267004CE8A2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EDF2C200273004CE8A2 /* exerciseData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +339,8 @@
 				98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */,
 				98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */,
 				98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */,
+				98E64EE22C2002DE004CE8A2 /* ExerciseListView.swift in Sources */,
+				98E64EE02C200273004CE8A2 /* exerciseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

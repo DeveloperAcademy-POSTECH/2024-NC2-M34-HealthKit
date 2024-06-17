@@ -71,33 +71,38 @@ struct HeartRateView: View {
     var body: some View {
         
 //        l heart = model.heartRate
-        
-        VStack {
+        ScrollView{
             VStack {
-                Text("Selected Item: \(item)")
-                    .font(.headline)
+                
+                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+                    .frame(height: 50)
                     .padding()
                 
-                Text("당신의 최대 심박: \(maxRate)")
-                    .font(.headline)
+                Text("심박수: \(Int(round(model.heartRate)))")
+                    .font(.title)
                     .padding()
-                Text("당신의 최소 심박: \(minRate)")
-                    .font(.headline)
-                    .padding()
-
-                Spacer()
+                
+                
+                VStack {
+                    Text("Selected Item: \(item)")
+                        .font(.headline)
+                        .padding()
+                    
+                    Text("당신의 최대 심박: \(maxRate)")
+                        .font(.headline)
+                        .padding()
+                    Text("당신의 최소 심박: \(minRate)")
+                        .font(.headline)
+                        .padding()
+                    
+                    Spacer()
+                }
             }
-            CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-                            .frame(height: 50)
-                            .padding()
-            
-            Text("심박수: \(Int(round(model.heartRate)))")
-                .font(.title)
-                .padding()
         }
     }
 }
 
+// MARK: - CustomSliderView
 
 struct CustomSlider: View {
     @Binding var value: Double
@@ -143,7 +148,6 @@ struct CustomSlider: View {
         .frame(height: 20)
     }
 }
-
 
 
 struct HeartRateView_Previews: PreviewProvider {
