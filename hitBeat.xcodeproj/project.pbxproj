@@ -15,6 +15,7 @@
 		98E64EBE2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EBD2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift */; };
 		98E64EC82C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */; };
 		98E64ECA2C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */; };
+		98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hitBeat Watch App.entitlements"; sourceTree = "<group>"; };
+		98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */,
 				98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */,
 				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
+				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
 				98E64EB02C1FF878004CE8A2 /* Assets.xcassets */,
 				98E64EB22C1FF878004CE8A2 /* Preview Content */,
 			);
@@ -313,6 +316,7 @@
 			files = (
 				98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */,
 				98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */,
+				98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
