@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98E64EA82C1FF877004CE8A2 /* hitBeat Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */; };
+		98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EAE2C1FF877004CE8A2 /* ContentView.swift */; };
+		98E64EB12C1FF878004CE8A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E64EB02C1FF878004CE8A2 /* Assets.xcassets */; };
+		98E64EB42C1FF878004CE8A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E64EB32C1FF878004CE8A2 /* Preview Assets.xcassets */; };
+		98E64EBE2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EBD2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift */; };
+		98E64EC82C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */; };
+		98E64ECA2C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98E64EA92C1FF877004CE8A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E64E9B2C1FF877004CE8A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98E64EA62C1FF877004CE8A2;
+			remoteInfo = "hitBeat Watch App";
+		};
+		98E64EBA2C1FF878004CE8A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E64E9B2C1FF877004CE8A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98E64EA62C1FF877004CE8A2;
+			remoteInfo = "hitBeat Watch App";
+		};
+		98E64EC42C1FF878004CE8A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E64E9B2C1FF877004CE8A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98E64EA62C1FF877004CE8A2;
+			remoteInfo = "hitBeat Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98E64ED02C1FF878004CE8A2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				98E64EA82C1FF877004CE8A2 /* hitBeat Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		98E64EA12C1FF877004CE8A2 /* hitBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hitBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hitBeat Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeatApp.swift; sourceTree = "<group>"; };
+		98E64EAE2C1FF877004CE8A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98E64EB02C1FF878004CE8A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98E64EB32C1FF878004CE8A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98E64EB92C1FF878004CE8A2 /* hitBeat Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hitBeat Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E64EBD2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppTests.swift; sourceTree = "<group>"; };
+		98E64EC32C1FF878004CE8A2 /* hitBeat Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hitBeat Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98E64EA42C1FF877004CE8A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EB62C1FF878004CE8A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EC02C1FF878004CE8A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98E64E9A2C1FF877004CE8A2 = {
+			isa = PBXGroup;
+			children = (
+				98E64EAB2C1FF877004CE8A2 /* hitBeat Watch App */,
+				98E64EBC2C1FF878004CE8A2 /* hitBeat Watch AppTests */,
+				98E64EC62C1FF878004CE8A2 /* hitBeat Watch AppUITests */,
+				98E64EA22C1FF877004CE8A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98E64EA22C1FF877004CE8A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EA12C1FF877004CE8A2 /* hitBeat.app */,
+				98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */,
+				98E64EB92C1FF878004CE8A2 /* hitBeat Watch AppTests.xctest */,
+				98E64EC32C1FF878004CE8A2 /* hitBeat Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98E64EAB2C1FF877004CE8A2 /* hitBeat Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */,
+				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
+				98E64EB02C1FF878004CE8A2 /* Assets.xcassets */,
+				98E64EB22C1FF878004CE8A2 /* Preview Content */,
+			);
+			path = "hitBeat Watch App";
+			sourceTree = "<group>";
+		};
+		98E64EB22C1FF878004CE8A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EB32C1FF878004CE8A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		98E64EBC2C1FF878004CE8A2 /* hitBeat Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EBD2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift */,
+			);
+			path = "hitBeat Watch AppTests";
+			sourceTree = "<group>";
+		};
+		98E64EC62C1FF878004CE8A2 /* hitBeat Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */,
+				98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "hitBeat Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98E64EA02C1FF877004CE8A2 /* hitBeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E64ED12C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat" */;
+			buildPhases = (
+				98E64E9F2C1FF877004CE8A2 /* Resources */,
+				98E64ED02C1FF878004CE8A2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E64EAA2C1FF877004CE8A2 /* PBXTargetDependency */,
+			);
+			name = hitBeat;
+			productName = hitBeat;
+			productReference = 98E64EA12C1FF877004CE8A2 /* hitBeat.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		98E64EA62C1FF877004CE8A2 /* hitBeat Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E64ECD2C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch App" */;
+			buildPhases = (
+				98E64EA32C1FF877004CE8A2 /* Sources */,
+				98E64EA42C1FF877004CE8A2 /* Frameworks */,
+				98E64EA52C1FF877004CE8A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hitBeat Watch App";
+			productName = "hitBeat Watch App";
+			productReference = 98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		98E64EB82C1FF878004CE8A2 /* hitBeat Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E64ED42C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch AppTests" */;
+			buildPhases = (
+				98E64EB52C1FF878004CE8A2 /* Sources */,
+				98E64EB62C1FF878004CE8A2 /* Frameworks */,
+				98E64EB72C1FF878004CE8A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E64EBB2C1FF878004CE8A2 /* PBXTargetDependency */,
+			);
+			name = "hitBeat Watch AppTests";
+			productName = "hitBeat Watch AppTests";
+			productReference = 98E64EB92C1FF878004CE8A2 /* hitBeat Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		98E64EC22C1FF878004CE8A2 /* hitBeat Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E64ED72C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch AppUITests" */;
+			buildPhases = (
+				98E64EBF2C1FF878004CE8A2 /* Sources */,
+				98E64EC02C1FF878004CE8A2 /* Frameworks */,
+				98E64EC12C1FF878004CE8A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E64EC52C1FF878004CE8A2 /* PBXTargetDependency */,
+			);
+			name = "hitBeat Watch AppUITests";
+			productName = "hitBeat Watch AppUITests";
+			productReference = 98E64EC32C1FF878004CE8A2 /* hitBeat Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98E64E9B2C1FF877004CE8A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					98E64EA02C1FF877004CE8A2 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					98E64EA62C1FF877004CE8A2 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					98E64EB82C1FF878004CE8A2 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 98E64EA62C1FF877004CE8A2;
+					};
+					98E64EC22C1FF878004CE8A2 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 98E64EA62C1FF877004CE8A2;
+					};
+				};
+			};
+			buildConfigurationList = 98E64E9E2C1FF877004CE8A2 /* Build configuration list for PBXProject "hitBeat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98E64E9A2C1FF877004CE8A2;
+			productRefGroup = 98E64EA22C1FF877004CE8A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98E64EA02C1FF877004CE8A2 /* hitBeat */,
+				98E64EA62C1FF877004CE8A2 /* hitBeat Watch App */,
+				98E64EB82C1FF878004CE8A2 /* hitBeat Watch AppTests */,
+				98E64EC22C1FF878004CE8A2 /* hitBeat Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98E64E9F2C1FF877004CE8A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EA52C1FF877004CE8A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E64EB42C1FF878004CE8A2 /* Preview Assets.xcassets in Resources */,
+				98E64EB12C1FF878004CE8A2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EB72C1FF878004CE8A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EC12C1FF878004CE8A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98E64EA32C1FF877004CE8A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */,
+				98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EB52C1FF878004CE8A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E64EBE2C1FF878004CE8A2 /* hitBeat_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E64EBF2C1FF878004CE8A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E64ECA2C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift in Sources */,
+				98E64EC82C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98E64EAA2C1FF877004CE8A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98E64EA62C1FF877004CE8A2 /* hitBeat Watch App */;
+			targetProxy = 98E64EA92C1FF877004CE8A2 /* PBXContainerItemProxy */;
+		};
+		98E64EBB2C1FF878004CE8A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98E64EA62C1FF877004CE8A2 /* hitBeat Watch App */;
+			targetProxy = 98E64EBA2C1FF878004CE8A2 /* PBXContainerItemProxy */;
+		};
+		98E64EC52C1FF878004CE8A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98E64EA62C1FF877004CE8A2 /* hitBeat Watch App */;
+			targetProxy = 98E64EC42C1FF878004CE8A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		98E64ECB2C1FF878004CE8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98E64ECC2C1FF878004CE8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		98E64ECE2C1FF878004CE8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hitBeat Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lucia.hitBeat.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		98E64ECF2C1FF878004CE8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hitBeat Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lucia.hitBeat.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		98E64ED22C1FF878004CE8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lucia.hitBeat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		98E64ED32C1FF878004CE8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lucia.hitBeat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98E64ED52C1FF878004CE8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucia.hitBeat-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hitBeat Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hitBeat Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		98E64ED62C1FF878004CE8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucia.hitBeat-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hitBeat Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hitBeat Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		98E64ED82C1FF878004CE8A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucia.hitBeat-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "hitBeat Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		98E64ED92C1FF878004CE8A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CYBK9YX4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucia.hitBeat-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "hitBeat Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98E64E9E2C1FF877004CE8A2 /* Build configuration list for PBXProject "hitBeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E64ECB2C1FF878004CE8A2 /* Debug */,
+				98E64ECC2C1FF878004CE8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E64ECD2C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E64ECE2C1FF878004CE8A2 /* Debug */,
+				98E64ECF2C1FF878004CE8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E64ED12C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E64ED22C1FF878004CE8A2 /* Debug */,
+				98E64ED32C1FF878004CE8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E64ED42C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E64ED52C1FF878004CE8A2 /* Debug */,
+				98E64ED62C1FF878004CE8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E64ED72C1FF878004CE8A2 /* Build configuration list for PBXNativeTarget "hitBeat Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E64ED82C1FF878004CE8A2 /* Debug */,
+				98E64ED92C1FF878004CE8A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98E64E9B2C1FF877004CE8A2 /* Project object */;
+}
