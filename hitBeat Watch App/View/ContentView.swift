@@ -85,8 +85,8 @@ struct ContentView: View {
                             ZStack{
                                 Rectangle()
                                     .fill(.gray)
-                                    .frame(height: 36)
-                                    .cornerRadius(20)
+                                    .frame(width: 180,height: 36)
+                                    .cornerRadius(15)
                                 Text("Next")
                             }
                         }

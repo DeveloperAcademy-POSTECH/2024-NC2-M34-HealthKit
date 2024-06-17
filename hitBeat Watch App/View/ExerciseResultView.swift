@@ -18,33 +18,37 @@ struct ExerciseResultView: View {
     
     var body: some View {
         
-//        l heart = model.heartRate
-        ScrollView{
+        NavigationStack {
             VStack {
-                
-                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-                    .frame(height: 50)
-                    .padding()
-                
-                Text("심박수: \(Int(round(model.heartRate)))")
-                    .font(.title)
-                    .padding()
-                
-                
-                VStack {
-                    Text("Selected Item: \(item)")
-                        .font(.headline)
+                VStack{
+                    Circle()
+                        .fill(.gray)
+                        .frame(height: 50)
                         .padding()
                     
-                    Text("당신의 최대 심박: \(maxRate)")
-                        .font(.headline)
-                        .padding()
-                    Text("당신의 최소 심박: \(minRate)")
-                        .font(.headline)
-                        .padding()
                     
-                    Spacer()
+                    Text("\(item)")
+                    
+                    Text("\(minRate) - \(maxRate)")
+                        .font(.title)
+                    
+                    Text("심박수를 유지하세요.")
+                        .font(.caption2)
                 }
+                .padding()
+                
+                
+                NavigationLink(destination: HeartRateView(maxRate: maxRate, minRate: minRate, item: item)) {
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(.gray)
+                            .frame(width: 180,height: 36)
+                            .cornerRadius(15)
+                        Text("Next")
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
             }
         }
     }
@@ -52,5 +56,5 @@ struct ExerciseResultView: View {
 
 
 #Preview {
-    ExerciseResultView(maxRate: 200, minRate: 120, item: "")
+    ExerciseResultView(maxRate: 200, minRate: 120, item: "운동능력")
 }
