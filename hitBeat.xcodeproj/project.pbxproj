@@ -67,6 +67,7 @@
 		98E64EC32C1FF878004CE8A2 /* hitBeat Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hitBeat Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E64EC72C1FF878004CE8A2 /* hitBeat_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		98E64EC92C1FF878004CE8A2 /* hitBeat_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeat_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hitBeat Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 		98E64EAB2C1FF877004CE8A2 /* hitBeat Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				98E64EDA2C1FF944004CE8A2 /* hitBeat Watch App.entitlements */,
 				98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */,
 				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
 				98E64EB02C1FF878004CE8A2 /* Assets.xcassets */,
@@ -471,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "hitBeat Watch App/hitBeat Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hitBeat Watch App/Preview Content\"";
@@ -478,6 +481,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "심박수 데이터를 읽습니다. ";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "심박수 데이터를 공유합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "심박수 데이터를 업데이트합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "hitBeat Watch App/hitBeat Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hitBeat Watch App/Preview Content\"";
@@ -508,6 +515,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = hitBeat;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "심박수 데이터를 읽습니다. ";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "심박수 데이터를 공유합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "심박수 데이터를 업데이트합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
