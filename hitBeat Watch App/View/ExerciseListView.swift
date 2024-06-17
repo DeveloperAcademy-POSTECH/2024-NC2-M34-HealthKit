@@ -28,11 +28,11 @@ struct ExerciseListView: View {
         NavigationStack {
             Text("\(highHeart)")
             
-//            List(exerciseLists) { exercise in
-//                NavigationLink(destination: HeartRateView(maxRate: Int(round(Float(highHeart) * (exercise.maxpercent))), minRate:  Int(round(Float(highHeart) * (exercise.minpercent))),item: exercise.name)) {
-//                    Text(exercise.name)
-//                }
-//            }
+            List(exerciseLists) { exercise in
+                NavigationLink(destination: HeartRateView(maxRate: Int(round(Float(highHeart) * (exercise.maxpercent))), minRate:  Int(round(Float(highHeart) * (exercise.minpercent))),item: exercise.name)) {
+                    Text(exercise.name)
+                }
+            }
             .navigationTitle("exercise")
         }
         
