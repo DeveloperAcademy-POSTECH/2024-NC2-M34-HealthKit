@@ -150,8 +150,6 @@ struct CustomSlider: View {
 }
 
 
-struct HeartRateView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeartRateView(maxRate: 200, minRate: 180, item: "")
-    }
+#Preview {
+    HeartRateView(maxRate: 200, minRate: 180, item: "")
 }

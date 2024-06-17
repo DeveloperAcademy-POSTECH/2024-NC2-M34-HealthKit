@@ -18,6 +18,7 @@
 		98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */; };
 		98E64EE02C200273004CE8A2 /* exerciseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EDF2C200273004CE8A2 /* exerciseData.swift */; };
 		98E64EE22C2002DE004CE8A2 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */; };
+		98E64EE42C200CFF004CE8A2 /* ExerciseResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EE32C200CFF004CE8A2 /* ExerciseResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		98E64EDF2C200273004CE8A2 /* exerciseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exerciseData.swift; sourceTree = "<group>"; };
 		98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
+		98E64EE32C200CFF004CE8A2 /* ExerciseResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
 				98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */,
+				98E64EE32C200CFF004CE8A2 /* ExerciseResultView.swift */,
 				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
 			);
 			path = View;
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */,
+				98E64EE42C200CFF004CE8A2 /* ExerciseResultView.swift in Sources */,
 				98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */,
 				98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */,
 				98E64EE22C2002DE004CE8A2 /* ExerciseListView.swift in Sources */,
