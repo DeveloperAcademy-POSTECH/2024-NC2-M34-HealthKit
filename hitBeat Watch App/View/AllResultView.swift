@@ -10,11 +10,11 @@ import SwiftUI
 struct AllResultView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    
+    @EnvironmentObject var stopwatchManager: StopwatchManager
     
     var body: some View {
         VStack{
-            Text("")
+            Text("\(stopwatchManager.finalTime)")
             
             Button{
                 self.presentationMode.wrappedValue.dismiss()

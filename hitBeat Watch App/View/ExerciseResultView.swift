@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ExerciseResultView: View {
     
+//    @EnvironmentObject var stopwatchManager: StopwatchManager
+//    @EnvironmentObject var stopstopwatchManager: stopStopwatchManager
+    
+    @StateObject private var stopwatchManager = StopwatchManager()
+    @StateObject private var stopstopwatchManager = stopStopwatchManager()
     
     @State private var isShowingTabView = false
     @State private var isShowingResultView = false
@@ -58,9 +63,13 @@ struct ExerciseResultView: View {
             .buttonStyle(PlainButtonStyle())
             .sheet(isPresented: $isShowingTabView) {
                 ExerciseTabView( isShowingResultView: $isShowingResultView, isShowingTabView: $isShowingTabView, maxRate: maxRate, minRate: minRate, item: item)
+                    .environmentObject(stopwatchManager)
+                    .environmentObject(stopstopwatchManager)
             }
             .fullScreenCover(isPresented: $isShowingResultView) {
-                        AllResultView()
+                AllResultView()
+                    .environmentObject(stopwatchManager)
+                    .environmentObject(stopstopwatchManager)
                     }
         }
         

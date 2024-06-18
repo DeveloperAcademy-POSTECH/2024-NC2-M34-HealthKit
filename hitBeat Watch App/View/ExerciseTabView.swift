@@ -11,10 +11,13 @@ struct ExerciseTabView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @EnvironmentObject var stopwatchManager: StopwatchManager
+    @EnvironmentObject var stopstopwatchManager: stopStopwatchManager
+    
     @StateObject var model = HeartRateModel()
     
-    @ObservedObject var stopwatchManager = StopwatchManager()
-    @ObservedObject var stopstopwatchManager = stopStopwatchManager()
+//    @ObservedObject var stopwatchManager = StopwatchManager()
+//    @ObservedObject var stopstopwatchManager = stopStopwatchManager()
 
     @State private var finalTime: String = "00:00:00"
     
@@ -45,6 +48,7 @@ struct ExerciseTabView: View {
                     .padding(.top,24)
                     HeartRateView(maxRate: maxRate, minRate: minRate, item: item)
                         .environmentObject(stopwatchManager)
+                        .environmentObject(stopstopwatchManager)
                 }
                 .tabItem {
                     Image(systemName: "circle")
@@ -57,7 +61,7 @@ struct ExerciseTabView: View {
                         .environmentObject(stopstopwatchManager)
                     // 닫기 버튼
                     Button{
-                        finalTime = stopwatchManager.formattedTime
+                        stopwatchManager.finalTime = stopwatchManager.formattedTime
                         stopwatchManager.stop()
                         stopstopwatchManager.stop()
                         self.presentationMode.wrappedValue.dismiss()
