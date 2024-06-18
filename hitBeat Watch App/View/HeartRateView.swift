@@ -10,14 +10,13 @@ import HealthKit
 
 struct HeartRateView: View {
     @StateObject var model = HeartRateModel()
-    @Binding var isShowingHeartRateView: Bool
     
     var maxRate: Int
     var minRate: Int
     var item: String
     
     var body: some View {
-        ScrollView {
+//        ScrollView {
             VStack {
                 VStack {
                     Text("Selected Item: \(item)")
@@ -40,8 +39,10 @@ struct HeartRateView: View {
                 Text("심박수: \(Int(round(model.heartRate)))")
                     .font(.title)
                     .padding()
+                
+                
             }
-        }
+//        }
     }
 }
 
@@ -96,5 +97,5 @@ struct CustomSlider: View {
 
 
 #Preview {
-    HeartRateView(isShowingHeartRateView: .constant(true), maxRate: 200, minRate: 180,item: "")
+    HeartRateView( maxRate: 200, minRate: 180,item: "")
 }

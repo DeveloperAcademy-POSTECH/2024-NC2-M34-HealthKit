@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ExerciseResultView: View {
-    @StateObject var stopwatchManager = StopwatchManager()
     
-    @State private var isShowingHeartRateView = false
+    
+    @State private var isShowingTabView = false
     
     var maxRate: Int
     var minRate: Int
@@ -18,19 +18,10 @@ struct ExerciseResultView: View {
     
     var body: some View {
         Group {
-            if isShowingHeartRateView {
+            if isShowingTabView {
                 VStack {
-                    HeartRateView(isShowingHeartRateView: $isShowingHeartRateView, maxRate: maxRate, minRate: minRate, item: item)
+                    ExerciseTabView( isShowingTabView: $isShowingTabView, maxRate: maxRate, minRate: minRate, item: item)
                     
-                    Text(stopwatchManager.formattedTime)
-                        .font(.largeTitle)
-                        .padding()
-                }
-                .onAppear {
-                    stopwatchManager.start()
-                }
-                .onDisappear {
-                    stopwatchManager.stop()
                 }
             } else {
                 VStack {
@@ -42,25 +33,35 @@ struct ExerciseResultView: View {
                         
                         Text("\(item)")
                         
-                        Text("\(minRate) - \(maxRate)")
-                            .font(.title)
-                        
+                        HStack(alignment: .bottom){
+                            Text("\(minRate) - \(maxRate)")
+                                .font(.title2)
+                                .bold()
+                                .foregroundColor(.hitRed)
+                            
+                            Text("BPM")
+                                .foregroundColor(.hitRed)
+                        }
+                        .padding(2)
+                            
                         Text("심박수를 유지하세요.")
                             .font(.caption2)
                     }
                     .padding()
                     
                     Button {
-                        stopwatchManager.start()
-                        isShowingHeartRateView.toggle()
+//                        stopwatchManager.start()
+                        isShowingTabView.toggle()
                     } label: {
-                        Rectangle()
-                            .fill(Color.green)
-                            .cornerRadius(10)
-                            .frame(height: 50)
+                        ZStack{
+                            Rectangle()
+                                .fill(.hitRed)
+                                .frame(width: 160,height: 36)
+                                .cornerRadius(20)
+                            Text("운동시작")
+                        }
                     }
-                    .frame(width: 100, height: 50)
-                    .padding()
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
         }

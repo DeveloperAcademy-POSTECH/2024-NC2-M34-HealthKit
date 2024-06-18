@@ -25,14 +25,11 @@ struct ContentView: View {
                     
                     VStack(spacing: 0){
                         Text("나이입력")
-                            .font(.caption)
+                            .font(.title3)
                             .frame(alignment: .center)
                             .bold()
-                            .padding()
+                            .padding(.bottom,28)
                         
-                        Text("운동목적에 따라 효과적인 심박수를 유지하면 최대의 운동효과를 \n기대할 수 있습니다.")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
                         
                         HStack(alignment: .bottom){
                             
@@ -41,13 +38,14 @@ struct ContentView: View {
                             } label: {
                                 ZStack{
                                     Circle()
-                                        .fill(.gray)
+                                        .fill(.backRed)
                                         .frame(width: 40,height: 40)
                                     
                                     Image(systemName: "minus")
                                 }
                             }
                             .buttonStyle(PlainButtonStyle())
+                            .padding(.horizontal)
                             
                             Spacer()
                             
@@ -61,6 +59,7 @@ struct ContentView: View {
                             Text("세")
                                 .font(.footnote)
                                 .offset(CGSize(width: 2, height: -5))
+                            
                             Spacer()
                             
                             Button{
@@ -68,26 +67,25 @@ struct ContentView: View {
                             } label: {
                                 ZStack{
                                     Circle()
-                                        .fill(.gray)
+                                        .fill(.backRed)
                                         .frame(width: 40,height: 40)
                                     
                                     Image(systemName: "plus")
                                 }
                             }
                             .buttonStyle(PlainButtonStyle())
+                            .padding(.horizontal)
                             
                         }
-                        .padding()
+                        .padding(.bottom,44)
                         
-//                        TextField("Enter number", value: $age, formatter: formatter)
                         NavigationLink(destination: ExerciseListView(highHeart: (220 - age), age: age)) {
-                            
                             ZStack{
                                 Rectangle()
-                                    .fill(.gray)
-                                    .frame(width: 180,height: 36)
-                                    .cornerRadius(15)
-                                Text("Next")
+                                    .fill(.hitRed)
+                                    .frame(width: 160,height: 36)
+                                    .cornerRadius(20)
+                                Text("다음")
                             }
                         }
                         .buttonStyle(PlainButtonStyle())
