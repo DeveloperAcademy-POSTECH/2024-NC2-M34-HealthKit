@@ -64,54 +64,100 @@
 import SwiftUI
 import HealthKit
 
+
+//struct HeartRateView: View {
+//    @EnvironmentObject var stopwatchManager: StopwatchManager
+//    @ObservedObject var model = HeartRateModel()
+//    
+//    @Binding var isShowingHeartRateView: Bool
+//    
+//    var maxRate: Int
+//    var minRate: Int
+//    var item: String
+//    
+//    var body: some View {
+//        ScrollView {
+//            VStack {
+//                VStack {
+//                    Text("Selected Item: \(item)")
+//                        .font(.headline)
+//                        .padding()
+//                    
+//                    Text("당신의 최대 심박: \(maxRate)")
+//                        .font(.headline)
+//                        .padding()
+//                    
+//                    Text("당신의 최소 심박: \(minRate)")
+//                        .font(.headline)
+//                        .padding()
+//                }
+//                
+//                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+//                    .frame(height: 50)
+//                    .padding()
+//                
+//                Text("심박수: \(Int(round(model.heartRate)))")
+//                    .font(.title)
+//                    .padding()
+//                
+//                Text(stopwatchManager.formattedTime)
+//                    .font(.largeTitle)
+//                    .padding()
+//            }
+//        }
+//        .onAppear {
+//            stopwatchManager.start()
+//        }
+//        .onDisappear {
+//            stopwatchManager.stop()
+//        }
+//    }
+//}
+
+
 struct HeartRateView: View {
-    
-    @ObservedObject var model = HeartRateModel()
-    
+    @StateObject var model = HeartRateModel()
     @Binding var isShowingHeartRateView: Bool
     
     var maxRate: Int
     var minRate: Int
     var item: String
     
-    
     var body: some View {
-        
-//        l heart = model.heartRate
-        
-        VStack {
+        ScrollView {
             VStack {
-                Text("Selected Item: \(item)")
-                    .font(.headline)
+                VStack {
+                    Text("Selected Item: \(item)")
+                        .font(.headline)
+                        .padding()
+                    
+                    Text("당신의 최대 심박: \(maxRate)")
+                        .font(.headline)
+                        .padding()
+                    
+                    Text("당신의 최소 심박: \(minRate)")
+                        .font(.headline)
+                        .padding()
+                }
+                
+                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+                    .frame(height: 50)
                     .padding()
                 
-                Text("당신의 최대 심박: \(maxRate)")
-                    .font(.headline)
+                Text("심박수: \(Int(round(model.heartRate)))")
+                    .font(.title)
                     .padding()
-                Text("당신의 최소 심박: \(minRate)")
-                    .font(.headline)
-                    .padding()
-
-                Spacer()
             }
-            CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-                            .frame(height: 50)
-                            .padding()
-            
-            Text("심박수: \(Int(round(model.heartRate)))")
-                .font(.title)
-                .padding()
         }
     }
 }
+
 
 // MARK: - CustomSliderView
 
 struct CustomSlider: View {
     @Binding var value: Double
     let range: ClosedRange<Double>
-    
-    @GestureState private var dragOffset: CGSize = .zero
     
     var body: some View {
         GeometryReader { geometry in
