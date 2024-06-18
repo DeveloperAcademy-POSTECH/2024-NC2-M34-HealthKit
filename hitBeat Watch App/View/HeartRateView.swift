@@ -16,33 +16,45 @@ struct HeartRateView: View {
     var item: String
     
     var body: some View {
-//        ScrollView {
+        VStack {
             VStack {
-                VStack {
-                    Text("Selected Item: \(item)")
-                        .font(.headline)
-                        .padding()
-                    
-                    Text("당신의 최대 심박: \(maxRate)")
-                        .font(.headline)
-                        .padding()
-                    
-                    Text("당신의 최소 심박: \(minRate)")
-                        .font(.headline)
-                        .padding()
-                }
-                
-                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+                Circle()
+                    .fill(.gray)
                     .frame(height: 50)
                     .padding()
                 
-                Text("심박수: \(Int(round(model.heartRate)))")
-                    .font(.title)
-                    .padding()
                 
-                
+                HStack(alignment: .bottom){
+                    Text("\(Int(round(model.heartRate)))")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.hitRed)
+                    
+                    Text("BPM")
+                        .foregroundColor(.hitRed)
+                }
+                .padding(2)
+                    
+                Text("심박수를 유지하세요.")
+                    .font(.caption2)
             }
-//        }
+            
+            CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
+            
+//            HStack{
+//                Text("\(maxRate)")
+//                    .font(.headline)
+//                    .padding()
+//                
+//                Spacer()
+            
+//
+//                Text("\(minRate)")
+//                    .font(.headline)
+//                    .padding()
+//            }
+        }
+        .padding()
     }
 }
 
@@ -51,44 +63,55 @@ struct HeartRateView: View {
 
 struct CustomSlider: View {
     @Binding var value: Double
+    
     let range: ClosedRange<Double>
+    let max: Int
+    let min: Int
     
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
             
-            HStack(spacing:0){
-                ZStack(alignment: .leading) {
-                    Rectangle()
-                        .foregroundColor(.gray)
-                        .frame(height: 4)
-                    
-                    Rectangle()
-                        .foregroundColor(.blue)
-                        .frame(width: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width, height: 4)
-                    
+            VStack(spacing:0){
+                HStack(spacing: 0){
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .foregroundColor(.backgroundRed)
+                            .cornerRadius(20)
+                            .frame(height: 8)
                         
-                    VStack {
-                        Circle()
-                        Image(systemName: "figure.run")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .frame(width: 10, height: 10)
-                            .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
-                                    - 10)
+                        Rectangle()
+                            .foregroundColor(.hitRed)
+                            .cornerRadius(20)
+                            .frame(width: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width, height: 8)
+                        
+                        
+                        VStack {
+                            Circle()
+                            Image(systemName: "figure.run")
+                                .resizable()
+                                .foregroundColor(.white)
+                                .frame(width: 10, height: 10)
+                                .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
+                                        - 10)
                             
-                        
-                        Text("\(Int(value))")
-                            .font(.caption)
-                            .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
-                                    - 10)
+                            
+                            Text("\(Int(value))")
+                                .font(.caption)
+                                .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
+                                        - 10)
+                        }
                     }
-                    
-                    
+                }
+                HStack{
+                    Text("\(min)")
+                    Spacer()
+                    Text("\(max)")
                 }
             }
         }
-        .frame(height: 20)
+        .padding()
+        
     }
 }
 
