@@ -9,59 +9,6 @@ import Foundation
 import SwiftUI
 import HealthKit
 
-//class HeartRateModel: ObservableObject {
-//    @Published var heartRate: Double = 0
-//    
-//    private let healthStore = HKHealthStore()
-//    
-//    init() {
-//        requestHeartRatePermission()
-//    }
-//    
-//    func requestHeartRatePermission() {
-//        let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
-//        
-//        healthStore.requestAuthorization(toShare: [], read: [heartRateType]) { (success, error) in
-//            if success {
-//                self.startHeartRateQuery()
-//            } else {
-//                print("건강 데이터에 대한 권한을 얻지 못했습니다.")
-//            }
-//        }
-//    }
-//    
-//    func startHeartRateQuery() {
-//        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else { return }
-//        
-//        let query = HKObserverQuery(sampleType: heartRateType, predicate: nil) { (query, completionHandler, error) in
-//            if error == nil {
-//                self.fetchLatestHeartRate()
-//                completionHandler()
-//            }
-//        }
-//        
-//        healthStore.execute(query)
-//    }
-//    
-//    func fetchLatestHeartRate() {
-//        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else { return }
-//        
-//        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-//        let query = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
-//            guard let results = results as? [HKQuantitySample], let sample = results.first else { return }
-//            
-//            let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-//            let value = sample.quantity.doubleValue(for: heartRateUnit)
-//            DispatchQueue.main.async {
-//                self.heartRate = value
-//            }
-//        }
-//        
-//        healthStore.execute(query)
-//    }
-//}
-
-
 class HeartRateModel: ObservableObject {
     @Published var heartRate: Double = 0
     

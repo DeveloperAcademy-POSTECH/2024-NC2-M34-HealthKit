@@ -4,116 +4,9 @@
 //
 //  Created by 정혜정 on 6/17/24.
 //
-//
-//import SwiftUI
-//import HealthKit
-//
-//struct HeartRateView: View {
-//    
-//    @EnvironmentObject var stopwatchManager: StopwatchManager
-//    
-//    @ObservedObject var model = HeartRateModel()
-//    
-//    @Binding var isShowingHeartRateView: Bool
-//    
-//    var maxRate: Int
-//    var minRate: Int
-//    var item: String
-//    
-//    
-//    var body: some View {
-//        
-////        l heart = model.heartRate
-//        ScrollView{
-//            VStack {
-//                
-//                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-//                    .frame(height: 50)
-//                    .padding()
-//                
-//                Text("심박수: \(Int(round(model.heartRate)))")
-//                    .font(.title)
-//                    .padding()
-//                
-//                Text(stopwatchManager.formattedTime)
-//                    .font(.largeTitle)
-//                    .padding()
-//                
-//                
-//                VStack {
-//                    Text("Selected Item: \(item)")
-//                        .font(.headline)
-//                        .padding()
-//                    
-//                    Text("당신의 최대 심박: \(maxRate)")
-//                        .font(.headline)
-//                        .padding()
-//                    Text("당신의 최소 심박: \(minRate)")
-//                        .font(.headline)
-//                        .padding()
-//                    
-//                    Spacer()
-//                }
-//            }
-//        }
-//    }
-//}
-//
-
 
 import SwiftUI
 import HealthKit
-
-
-//struct HeartRateView: View {
-//    @EnvironmentObject var stopwatchManager: StopwatchManager
-//    @ObservedObject var model = HeartRateModel()
-//    
-//    @Binding var isShowingHeartRateView: Bool
-//    
-//    var maxRate: Int
-//    var minRate: Int
-//    var item: String
-//    
-//    var body: some View {
-//        ScrollView {
-//            VStack {
-//                VStack {
-//                    Text("Selected Item: \(item)")
-//                        .font(.headline)
-//                        .padding()
-//                    
-//                    Text("당신의 최대 심박: \(maxRate)")
-//                        .font(.headline)
-//                        .padding()
-//                    
-//                    Text("당신의 최소 심박: \(minRate)")
-//                        .font(.headline)
-//                        .padding()
-//                }
-//                
-//                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-//                    .frame(height: 50)
-//                    .padding()
-//                
-//                Text("심박수: \(Int(round(model.heartRate)))")
-//                    .font(.title)
-//                    .padding()
-//                
-//                Text(stopwatchManager.formattedTime)
-//                    .font(.largeTitle)
-//                    .padding()
-//            }
-//        }
-//        .onAppear {
-//            stopwatchManager.start()
-//        }
-//        .onDisappear {
-//            stopwatchManager.stop()
-//        }
-//    }
-//}
-
 
 struct HeartRateView: View {
     @StateObject var model = HeartRateModel()
@@ -204,5 +97,4 @@ struct CustomSlider: View {
 
 #Preview {
     HeartRateView(isShowingHeartRateView: .constant(true), maxRate: 200, minRate: 180,item: "")
-//    HeartRateView(maxRate: 180, minRate: 140, item: "")
 }

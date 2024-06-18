@@ -7,55 +7,6 @@
 
 import SwiftUI
 
-//struct ExerciseResultView: View {
-//    @ObservedObject var stopwatchManager = StopwatchManager()
-//    
-//    @State private var isShowingHeartRateView = false
-//    
-//    var maxRate: Int
-//    var minRate: Int
-//    var item: String
-//    
-//    var body: some View {
-//        Group {
-//            if isShowingHeartRateView {
-//                HeartRateView(isShowingHeartRateView: $isShowingHeartRateView, maxRate: maxRate, minRate: minRate, item: item)
-//                    .environmentObject(stopwatchManager)
-//            } else {
-//                VStack {
-//                    VStack {
-//                        Circle()
-//                            .fill(.gray)
-//                            .frame(height: 50)
-//                            .padding()
-//                        
-//                        Text("\(item)")
-//                        
-//                        Text("\(minRate) - \(maxRate)")
-//                            .font(.title)
-//                        
-//                        Text("심박수를 유지하세요.")
-//                            .font(.caption2)
-//                    }
-//                    .padding()
-//                    
-//                    Button {
-//                        stopwatchManager.start()
-//                        isShowingHeartRateView.toggle()
-//                    } label: {
-//                        Rectangle()
-//                            .fill(Color.green)
-//                            .cornerRadius(10)
-//                            .frame(height: 50)
-//                    }
-//                    .frame(width: 100, height: 50)
-//                    .padding()
-//                }
-//            }
-//        }
-//    }
-//}
-
 struct ExerciseResultView: View {
     @StateObject var stopwatchManager = StopwatchManager()
     

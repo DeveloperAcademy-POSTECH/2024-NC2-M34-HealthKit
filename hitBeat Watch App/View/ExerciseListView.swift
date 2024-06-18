@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct ExerciseListView: View {
-//    @Binding var isShowingExerciseListView: Bool
-    
     
     var highHeart: Int
-    
     var age: Int
     
     var exerciseLists = [
@@ -24,7 +21,6 @@ struct ExerciseListView: View {
     ]
     var body: some View {
 
-        
         NavigationStack {
             List(exerciseLists) { exercise in
                 NavigationLink(destination: ExerciseResultView(maxRate: Int(round(Float(highHeart) * (exercise.maxpercent))), minRate:  Int(round(Float(highHeart) * (exercise.minpercent))),item: exercise.comment)) 
