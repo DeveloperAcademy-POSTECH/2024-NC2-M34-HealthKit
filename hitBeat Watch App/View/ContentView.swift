@@ -30,7 +30,7 @@ struct ContentView: View {
                             .bold()
                             .padding()
                         
-                        Text("운동목적에 따라 효과적인 심박수를 유지하면 최대의 운동효과를 \n 기대할 수 있습니다.")
+                        Text("운동목적에 따라 효과적인 심박수를 유지하면 최대의 운동효과를 \n기대할 수 있습니다.")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                         

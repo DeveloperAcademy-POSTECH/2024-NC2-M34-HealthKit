@@ -12,6 +12,7 @@ struct hitBeat_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            HeartRateView(maxRate: 110, minRate: 60, item: "")
         }
     }
 }

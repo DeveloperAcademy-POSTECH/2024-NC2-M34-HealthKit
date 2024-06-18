@@ -4,64 +4,71 @@
 //
 //  Created by 정혜정 on 6/17/24.
 //
+//
+//import SwiftUI
+//import HealthKit
+//
+//struct HeartRateView: View {
+//    
+//    @EnvironmentObject var stopwatchManager: StopwatchManager
+//    
+//    @ObservedObject var model = HeartRateModel()
+//    
+//    @Binding var isShowingHeartRateView: Bool
+//    
+//    var maxRate: Int
+//    var minRate: Int
+//    var item: String
+//    
+//    
+//    var body: some View {
+//        
+////        l heart = model.heartRate
+//        ScrollView{
+//            VStack {
+//                
+//                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+//                    .frame(height: 50)
+//                    .padding()
+//                
+//                Text("심박수: \(Int(round(model.heartRate)))")
+//                    .font(.title)
+//                    .padding()
+//                
+//                Text(stopwatchManager.formattedTime)
+//                    .font(.largeTitle)
+//                    .padding()
+//                
+//                
+//                VStack {
+//                    Text("Selected Item: \(item)")
+//                        .font(.headline)
+//                        .padding()
+//                    
+//                    Text("당신의 최대 심박: \(maxRate)")
+//                        .font(.headline)
+//                        .padding()
+//                    Text("당신의 최소 심박: \(minRate)")
+//                        .font(.headline)
+//                        .padding()
+//                    
+//                    Spacer()
+//                }
+//            }
+//        }
+//    }
+//}
+//
+
 
 import SwiftUI
 import HealthKit
 
-class HeartRateModel: ObservableObject {
-    @Published var heartRate: Double = 0
-    
-    private let healthStore = HKHealthStore()
-    
-    init() {
-        requestHeartRatePermission()
-    }
-    
-    func requestHeartRatePermission() {
-        let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
-        
-        healthStore.requestAuthorization(toShare: [], read: [heartRateType]) { (success, error) in
-            if success {
-                self.startHeartRateQuery()
-            } else {
-                print("건강 데이터에 대한 권한을 얻지 못했습니다.")
-            }
-        }
-    }
-    
-    func startHeartRateQuery() {
-        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else { return }
-        
-        let query = HKObserverQuery(sampleType: heartRateType, predicate: nil) { (query, completionHandler, error) in
-            self.fetchLatestHeartRate()
-        }
-        
-        healthStore.execute(query)
-    }
-    
-    func fetchLatestHeartRate() {
-        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else { return }
-        
-        let query = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, results, error) in
-            guard let results = results as? [HKQuantitySample] else { return }
-            
-            if let sample = results.last {
-                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-                let value = sample.quantity.doubleValue(for: heartRateUnit)
-                DispatchQueue.main.async {
-                    self.heartRate = Double(value)
-                }
-            }
-        }
-        
-        healthStore.execute(query)
-    }
-}
-
-
 struct HeartRateView: View {
     
     @ObservedObject var model = HeartRateModel()
+    
+    @Binding var isShowingHeartRateView: Bool
     
     var maxRate: Int
     var minRate: Int
@@ -71,33 +78,29 @@ struct HeartRateView: View {
     var body: some View {
         
 //        l heart = model.heartRate
-        ScrollView{
+        
+        VStack {
             VStack {
-                
-                CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
-                    .frame(height: 50)
+                Text("Selected Item: \(item)")
+                    .font(.headline)
                     .padding()
                 
-                Text("심박수: \(Int(round(model.heartRate)))")
-                    .font(.title)
+                Text("당신의 최대 심박: \(maxRate)")
+                    .font(.headline)
                     .padding()
-                
-                
-                VStack {
-                    Text("Selected Item: \(item)")
-                        .font(.headline)
-                        .padding()
-                    
-                    Text("당신의 최대 심박: \(maxRate)")
-                        .font(.headline)
-                        .padding()
-                    Text("당신의 최소 심박: \(minRate)")
-                        .font(.headline)
-                        .padding()
-                    
-                    Spacer()
-                }
+                Text("당신의 최소 심박: \(minRate)")
+                    .font(.headline)
+                    .padding()
+
+                Spacer()
             }
+            CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate))
+                            .frame(height: 50)
+                            .padding()
+            
+            Text("심박수: \(Int(round(model.heartRate)))")
+                .font(.title)
+                .padding()
         }
     }
 }
@@ -150,6 +153,10 @@ struct CustomSlider: View {
 }
 
 
+
+
+
 #Preview {
-    HeartRateView(maxRate: 200, minRate: 180, item: "")
+    HeartRateView(isShowingHeartRateView: .constant(true), maxRate: 200, minRate: 180,item: "")
+//    HeartRateView(maxRate: 180, minRate: 140, item: "")
 }
