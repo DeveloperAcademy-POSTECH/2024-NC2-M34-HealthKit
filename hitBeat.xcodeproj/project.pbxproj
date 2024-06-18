@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981D3C102C215BE800A55CA3 /* AllResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D3C0F2C215BE800A55CA3 /* AllResultView.swift */; };
 		9828196F2C2118CF0050B5B6 /* ExerciseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9828196E2C2118CF0050B5B6 /* ExerciseTabView.swift */; };
 		982819712C21243A0050B5B6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982819702C21243A0050B5B6 /* HomeView.swift */; };
+		98D7C9BE2C2150BB0097039F /* ControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7C9BD2C2150BB0097039F /* ControllView.swift */; };
+		98D7C9C02C2153FE0097039F /* stopStopvwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7C9BF2C2153FD0097039F /* stopStopvwatchManager.swift */; };
 		98E64EA82C1FF877004CE8A2 /* hitBeat Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */; };
 		98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E64EAE2C1FF877004CE8A2 /* ContentView.swift */; };
@@ -64,8 +67,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		981D3C0F2C215BE800A55CA3 /* AllResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultView.swift; sourceTree = "<group>"; };
 		9828196E2C2118CF0050B5B6 /* ExerciseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTabView.swift; sourceTree = "<group>"; };
 		982819702C21243A0050B5B6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		98D7C9BD2C2150BB0097039F /* ControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllView.swift; sourceTree = "<group>"; };
+		98D7C9BF2C2153FD0097039F /* stopStopvwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopStopvwatchManager.swift; sourceTree = "<group>"; };
 		98E64EA12C1FF877004CE8A2 /* hitBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hitBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E64EA72C1FF877004CE8A2 /* hitBeat Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hitBeat Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E64EAC2C1FF877004CE8A2 /* hitBeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitBeatApp.swift; sourceTree = "<group>"; };
@@ -178,8 +184,10 @@
 				98E64EAE2C1FF877004CE8A2 /* ContentView.swift */,
 				98E64EE12C2002DE004CE8A2 /* ExerciseListView.swift */,
 				98E64EE32C200CFF004CE8A2 /* ExerciseResultView.swift */,
-				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
 				9828196E2C2118CF0050B5B6 /* ExerciseTabView.swift */,
+				98E64EDB2C1FF9D7004CE8A2 /* HeartRateView.swift */,
+				98D7C9BD2C2150BB0097039F /* ControllView.swift */,
+				981D3C0F2C215BE800A55CA3 /* AllResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				98E64EE62C20698B004CE8A2 /* StopwatchManager.swift */,
+				98D7C9BF2C2153FD0097039F /* stopStopvwatchManager.swift */,
 				98E64EE82C206C8A004CE8A2 /* HeartRateModel.swift */,
 			);
 			path = Manager;
@@ -361,12 +370,15 @@
 			files = (
 				9828196F2C2118CF0050B5B6 /* ExerciseTabView.swift in Sources */,
 				98E64EE92C206C8A004CE8A2 /* HeartRateModel.swift in Sources */,
+				98D7C9C02C2153FE0097039F /* stopStopvwatchManager.swift in Sources */,
+				98D7C9BE2C2150BB0097039F /* ControllView.swift in Sources */,
 				98E64EAF2C1FF877004CE8A2 /* ContentView.swift in Sources */,
 				982819712C21243A0050B5B6 /* HomeView.swift in Sources */,
 				98E64EE42C200CFF004CE8A2 /* ExerciseResultView.swift in Sources */,
 				98E64EAD2C1FF877004CE8A2 /* hitBeatApp.swift in Sources */,
 				98E64EE72C20698B004CE8A2 /* StopwatchManager.swift in Sources */,
 				98E64EDC2C1FF9D7004CE8A2 /* HeartRateView.swift in Sources */,
+				981D3C102C215BE800A55CA3 /* AllResultView.swift in Sources */,
 				98E64EE22C2002DE004CE8A2 /* ExerciseListView.swift in Sources */,
 				98E64EE02C200273004CE8A2 /* exerciseData.swift in Sources */,
 			);

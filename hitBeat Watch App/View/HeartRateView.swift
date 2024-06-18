@@ -9,6 +9,9 @@ import SwiftUI
 import HealthKit
 
 struct HeartRateView: View {
+    
+    @EnvironmentObject var stopwatchManager: StopwatchManager
+    
     @StateObject var model = HeartRateModel()
     
     var maxRate: Int
@@ -16,43 +19,33 @@ struct HeartRateView: View {
     var item: String
     
     var body: some View {
-        VStack {
-            VStack {
-                Circle()
-                    .fill(.gray)
-                    .frame(height: 50)
-                    .padding()
+        
+        VStack(spacing: 0){
+            Circle()
+                .fill(.gray)
+                .frame(height: 50)
+            
+            Text("\(item)")
+                .bold()
                 
                 
-                HStack(alignment: .bottom){
-                    Text("\(Int(round(model.heartRate)))")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.hitRed)
-                    
-                    Text("BPM")
-                        .foregroundColor(.hitRed)
-                }
-                .padding(2)
-                    
-                Text("심박수를 유지하세요.")
-                    .font(.caption2)
+            HStack(alignment: .bottom){
+                Text("\(Int(round(model.heartRate)))")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.hitRed)
+                
+                Text("BPM")
+                    .foregroundColor(.hitRed)
             }
+            .padding(2)
+                
+            Text("심박수를 유지하세요.")
+                .font(.caption2)
             
             CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
             
-//            HStack{
-//                Text("\(maxRate)")
-//                    .font(.headline)
-//                    .padding()
-//                
-//                Spacer()
-            
-//
-//                Text("\(minRate)")
-//                    .font(.headline)
-//                    .padding()
-//            }
+            Spacer(minLength: 48)
         }
         .padding()
     }
@@ -91,16 +84,11 @@ struct CustomSlider: View {
                             Image(systemName: "figure.run")
                                 .resizable()
                                 .foregroundColor(.white)
-                                .frame(width: 10, height: 10)
-                                .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
-                                        - 10)
-                            
-                            
-                            Text("\(Int(value))")
-                                .font(.caption)
+                                .frame(width: 6, height: 6)
                                 .offset(x: CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound)) * width
                                         - 10)
                         }
+                        .padding(.bottom,4)
                     }
                 }
                 HStack{
@@ -121,4 +109,5 @@ struct CustomSlider: View {
 
 #Preview {
     HeartRateView( maxRate: 200, minRate: 180,item: "")
+        .environmentObject(StopwatchManager())
 }
