@@ -20,17 +20,20 @@ struct ControllView: View {
         
         
             if !stopwatchManager.isPaused{
-                
-                VStack{
-                    HStack{
-                        Spacer()
-                        
-                        Text("운동중")
-                            .font(.footnote)
-                            .foregroundColor(.hitRed)
-                    }
-//                    .padding(.top,14)
-                    .padding(.horizontal)
+                    
+                    VStack{
+                        HStack{
+                            
+                            
+                            Spacer()
+                            
+                            Text("운동중")
+                                .font(.footnote)
+                                .foregroundColor(.hitRed)
+                            
+                        }
+    //                    .padding(.top,14)
+//                        .padding(.horizontal)
                     
                     Button{
                         stopwatchManager.pause()
@@ -57,6 +60,7 @@ struct ControllView: View {
                     .padding()
                     
                     
+                    
                 }
                 
                 
@@ -76,7 +80,7 @@ struct ControllView: View {
                         
                     }
 //                    .padding(.top,14)
-                    .padding(.horizontal)
+//                    .padding(.horizontal)
                     
                     
                     Button{
@@ -126,4 +130,5 @@ struct ControllView: View {
 #Preview {
     ControllView( isShowingTabView: .constant(true))
         .environmentObject(StopwatchManager())
+        .environmentObject(stopStopwatchManager())
 }

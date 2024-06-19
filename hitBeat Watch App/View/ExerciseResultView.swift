@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ExerciseResultView: View {
     
-//    @EnvironmentObject var stopwatchManager: StopwatchManager
-//    @EnvironmentObject var stopstopwatchManager: stopStopwatchManager
-    
     @StateObject private var stopwatchManager = StopwatchManager()
     @StateObject private var stopstopwatchManager = stopStopwatchManager()
+    @StateObject private var heartRateManager = HeartRateManager()
     
     @State private var isShowingTabView = false
     @State private var isShowingResultView = false
@@ -24,53 +22,54 @@ struct ExerciseResultView: View {
     
     var body: some View {
         
-        VStack {
+        NavigationStack {
             VStack {
-                Circle()
-                    .fill(.gray)
-                    .frame(height: 50)
-                    .padding()
-                
-                Text("\(item)")
-                
-                HStack(alignment: .bottom){
-                    Text("\(minRate) - \(maxRate)")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.hitRed)
+                VStack {
+                    Circle()
+                        .fill(.gray)
+                        .frame(height: 50)
+                        .padding()
                     
-                    Text("BPM")
-                        .foregroundColor(.hitRed)
-                }
-                .padding(2)
+                    Text("\(item)")
                     
-                Text("심박수를 유지하세요.")
-                    .font(.caption2)
-            }
-            .padding()
-            
-            Button {
-                isShowingTabView.toggle()
-            } label: {
-                ZStack{
-                    Rectangle()
-                        .fill(.hitRed)
-                        .frame(width: 160,height: 36)
-                        .cornerRadius(20)
-                    Text("운동시작")
-                }
-            }
-            .buttonStyle(PlainButtonStyle())
-            .sheet(isPresented: $isShowingTabView) {
-                ExerciseTabView( isShowingResultView: $isShowingResultView, isShowingTabView: $isShowingTabView, maxRate: maxRate, minRate: minRate, item: item)
-                    .environmentObject(stopwatchManager)
-                    .environmentObject(stopstopwatchManager)
-            }
-            .fullScreenCover(isPresented: $isShowingResultView) {
-                AllResultView()
-                    .environmentObject(stopwatchManager)
-                    .environmentObject(stopstopwatchManager)
+                    HStack(alignment: .bottom){
+                        Text("\(minRate) - \(maxRate)")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.hitRed)
+                        
+                        Text("BPM")
+                            .foregroundColor(.hitRed)
                     }
+                    .padding(2)
+                    
+                    Text("심박수를 유지하세요.")
+                        .font(.caption2)
+                }
+                .padding()
+                
+                NavigationLink(destination: ExerciseTabView( isShowingResultView: $isShowingResultView, isShowingTabView: $isShowingTabView, maxRate: maxRate, minRate: minRate, item: item)
+                    .environmentObject(stopwatchManager)
+                    .environmentObject(stopstopwatchManager)
+                    .environmentObject(heartRateManager)
+                ) {
+                    ZStack{
+                        Rectangle()
+                            .fill(.hitRed)
+                            .frame(width: 160,height: 36)
+                            .cornerRadius(20)
+                        Text("운동시작")
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
+                
+                .fullScreenCover(isPresented: $isShowingResultView) {
+                    AllResultView(maxRate: maxRate, minRate: minRate)
+                        .environmentObject(stopwatchManager)
+                        .environmentObject(stopstopwatchManager)
+                        .environmentObject(heartRateManager)
+                }
+            }
         }
         
     }

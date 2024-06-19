@@ -44,45 +44,6 @@ struct HomeView: View {
     }
 }
 
-//struct HomeView: View {
-//    @State private var isModalPresented = false
-//    
-//    var body: some View {
-//        ZStack {
-//            // 배경 뷰
-//            Color.black.edgesIgnoringSafeArea(.all)
-//            
-//            // 모달 버튼
-//            Button("Show Modal") {
-//                self.isModalPresented.toggle()
-//            }
-//            .padding()
-//        }
-//        .sheet(isPresented: $isModalPresented) {
-//            ModalView()
-//        }
-//    }
-//}
-//
-//struct ModalView: View {
-//    @Environment(\.presentationMode) var presentationMode
-//    
-//    var body: some View {
-//        ZStack {
-//            // 모달 내용
-//            Color.yellow.edgesIgnoringSafeArea(.all)
-//            
-//            // 닫기 버튼
-//            Button("Close") {
-//                self.presentationMode.wrappedValue.dismiss()
-//            }
-//            .padding()
-//            .foregroundColor(.black)
-//        }
-//    }
-//}
-
-
 #Preview {
     HomeView()
 }

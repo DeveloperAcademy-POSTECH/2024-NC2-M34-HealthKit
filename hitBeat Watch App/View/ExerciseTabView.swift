@@ -13,11 +13,7 @@ struct ExerciseTabView: View {
     
     @EnvironmentObject var stopwatchManager: StopwatchManager
     @EnvironmentObject var stopstopwatchManager: stopStopwatchManager
-    
-    @StateObject var model = HeartRateModel()
-    
-//    @ObservedObject var stopwatchManager = StopwatchManager()
-//    @ObservedObject var stopstopwatchManager = stopStopwatchManager()
+    @EnvironmentObject var heartRateManager: HeartRateManager
 
     @State private var finalTime: String = "00:00:00"
     
@@ -45,10 +41,11 @@ struct ExerciseTabView: View {
                             .foregroundColor(.hitYellow)
                     }
                     .padding()
-                    .padding(.top,24)
+                    .padding(.top,34)
                     HeartRateView(maxRate: maxRate, minRate: minRate, item: item)
                         .environmentObject(stopwatchManager)
                         .environmentObject(stopstopwatchManager)
+                        .environmentObject(heartRateManager)
                 }
                 .tabItem {
                     Image(systemName: "circle")
@@ -59,11 +56,13 @@ struct ExerciseTabView: View {
                     ControllView(isShowingTabView: $isShowingTabView)
                         .environmentObject(stopwatchManager)
                         .environmentObject(stopstopwatchManager)
+                        .environmentObject(heartRateManager)
                     // 닫기 버튼
                     Button{
                         stopwatchManager.finalTime = stopwatchManager.formattedTime
                         stopwatchManager.stop()
                         stopstopwatchManager.stop()
+                        heartRateManager.stopTimer()
                         self.presentationMode.wrappedValue.dismiss()
                         self.isShowingResultView = true
                         
@@ -87,6 +86,8 @@ struct ExerciseTabView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     
+                    Spacer()
+                    
                     
                     
                 }
@@ -99,11 +100,12 @@ struct ExerciseTabView: View {
                 }
                 
             }
-            .background(.black)
             .tabViewStyle(PageTabViewStyle())
             .onAppear{
                 stopwatchManager.start()
+                heartRateManager.startTimer()
             }
+            .navigationBarBackButtonHidden()
         
     }
 }
@@ -112,4 +114,7 @@ struct ExerciseTabView: View {
 
 #Preview {
     ExerciseTabView(isShowingResultView: .constant(false), isShowingTabView: .constant(true), maxRate: 130, minRate: 90, item: "")
+        .environmentObject(StopwatchManager())
+        .environmentObject(stopStopwatchManager())
+        .environmentObject(HeartRateManager())
 }

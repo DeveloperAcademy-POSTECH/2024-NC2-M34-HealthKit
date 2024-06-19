@@ -11,8 +11,7 @@ import HealthKit
 struct HeartRateView: View {
     
     @EnvironmentObject var stopwatchManager: StopwatchManager
-    
-    @StateObject var model = HeartRateModel()
+    @EnvironmentObject var heartRateManager: HeartRateManager
     
     var maxRate: Int
     var minRate: Int
@@ -30,7 +29,7 @@ struct HeartRateView: View {
                 
                 
             HStack(alignment: .bottom){
-                Text("\(Int(round(model.heartRate)))")
+                Text("\(Int(round(heartRateManager.heartRate)))")
                     .font(.title2)
                     .bold()
                     .foregroundColor(.hitRed)
@@ -43,7 +42,7 @@ struct HeartRateView: View {
             Text("심박수를 유지하세요.")
                 .font(.caption2)
             
-            CustomSlider(value: $model.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
+            CustomSlider(value: $heartRateManager.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
             
             Spacer(minLength: 48)
         }
@@ -110,4 +109,5 @@ struct CustomSlider: View {
 #Preview {
     HeartRateView( maxRate: 200, minRate: 180,item: "")
         .environmentObject(StopwatchManager())
+        .environmentObject(HeartRateManager())
 }
