@@ -22,9 +22,27 @@ struct HeartRateView: View {
         @State var max = Double(maxRate)
         
         VStack(spacing: 0){
-            Circle()
-                .fill(.gray)
-                .frame(height: 50)
+            
+            if Int(heartRateManager.heartRate) < minRate{
+                
+                
+                Circle()
+                    .fill(.hitYellow)
+                    .frame(height: 50)
+            } else{
+                if Int(heartRateManager.heartRate) > maxRate {
+                    
+                    Circle()
+                        .fill(.hitRed)
+                        .frame(height: 50)
+                } else{
+                    Circle()
+                        .fill(.hitBlue)
+                        .frame(height: 50)
+                }
+            }
+            
+            
 
                 
             HStack(alignment: .bottom){
