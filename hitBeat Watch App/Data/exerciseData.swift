@@ -13,4 +13,5 @@ struct exerciseData: Identifiable{
     var comment: String
     var minpercent: Float
     var maxpercent: Float
+    var exerciseImage: String
 }
