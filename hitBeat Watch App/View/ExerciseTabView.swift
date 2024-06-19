@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct ExerciseTabView: View {
     
@@ -24,6 +25,7 @@ struct ExerciseTabView: View {
     var minRate: Int
     var item: String
     
+    let hapticType: WKHapticType = .notification
     
     var body: some View {
         
@@ -104,6 +106,22 @@ struct ExerciseTabView: View {
             .onAppear{
                 stopwatchManager.start()
                 heartRateManager.startTimer()
+            }
+            .onChange(of: heartRateManager.heartRate) { oldValue, newValue in
+                if (Int(oldValue) <= maxRate) && (Int(newValue) > maxRate) {
+                    WKInterfaceDevice.current().play(hapticType)
+                }
+                if (Int(oldValue) > maxRate) && (Int(newValue) <= maxRate) {
+                    WKInterfaceDevice.current().play(hapticType)
+                }
+                
+                if (Int(oldValue) >= minRate) && (Int(newValue) < minRate){
+                    WKInterfaceDevice.current().play(hapticType)
+                }
+                if (Int(oldValue) < minRate) && (Int(newValue) >= minRate) {
+                    WKInterfaceDevice.current().play(hapticType)
+                }
+                
             }
             .navigationBarBackButtonHidden()
         
