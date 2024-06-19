@@ -31,7 +31,7 @@ struct ExerciseTabView: View {
             TabView {
                 VStack{
                     HStack{
-                        Text("운동시간")
+                        Text("총 운동시간")
                             .font(.footnote)
                             .foregroundColor(.hitRed)
                         Spacer()

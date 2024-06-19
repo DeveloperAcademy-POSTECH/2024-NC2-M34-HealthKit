@@ -18,15 +18,14 @@ struct HeartRateView: View {
     var item: String
     
     var body: some View {
+        @State var min = Double(minRate)
+        @State var max = Double(maxRate)
         
         VStack(spacing: 0){
             Circle()
                 .fill(.gray)
                 .frame(height: 50)
-            
-            Text("\(item)")
-                .bold()
-                
+
                 
             HStack(alignment: .bottom){
                 Text("\(Int(round(heartRateManager.heartRate)))")
@@ -37,14 +36,40 @@ struct HeartRateView: View {
                 Text("BPM")
                     .foregroundColor(.hitRed)
             }
-            .padding(2)
+//            .padding(2)
                 
-            Text("심박수를 유지하세요.")
-                .font(.caption2)
+            if Int(heartRateManager.heartRate) < minRate{
+                
+                
+                Text("잠시만요!")
+                    .font(.caption2)
+                Text("심박수를 조금 더 올려주세요.")
+                    .font(.caption2)
+                
+                CustomSlider(value: $min, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
+            } else{
+                if Int(heartRateManager.heartRate) > maxRate {
+                    
+                    Text("심박수가 기본보다 높아요!")
+                        .font(.caption2)
+                    Text("심박수를 낮춰주세요.")
+                        .font(.caption2)
+                    
+                    CustomSlider(value: $max, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
+                } else{
+                    Text("좋아요.")
+                        .font(.caption2)
+                    Text("지금의 상태를 유지하세요.")
+                        .font(.caption2)
+                    
+                    CustomSlider(value: $heartRateManager.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
+                }
+            }
             
-            CustomSlider(value: $heartRateManager.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
             
-            Spacer(minLength: 48)
+            
+            
+            Spacer(minLength: 40)
         }
         .padding()
     }

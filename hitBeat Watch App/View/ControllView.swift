@@ -19,7 +19,7 @@ struct ControllView: View {
     var body: some View {
         
         
-            if !stopwatchManager.isPaused{
+            if stopwatchManager.isRunning{
                     
                     VStack{
                         HStack{
@@ -36,7 +36,8 @@ struct ControllView: View {
 //                        .padding(.horizontal)
                     
                     Button{
-                        stopwatchManager.pause()
+//                        stopwatchManager.pause()
+                        stopwatchManager.isRunning = false
                         stopstopwatchManager.start()
                     }label: {
                         VStack{
@@ -84,7 +85,8 @@ struct ControllView: View {
                     
                     
                     Button{
-                        stopwatchManager.resume()
+//                        stopwatchManager.resume()
+                        stopwatchManager.isRunning = true
                         stopstopwatchManager.stop()
                     }label: {
                         VStack{

@@ -12,8 +12,8 @@ import HealthKit
 class HeartRateManager: ObservableObject {
     @Published var heartRate: Double = 0
 //    test
-    @Published var heartRateHistory: [Double] = [89,79,89,90,93,94,95,93,85,79]
-//    @Published var heartRateHistory: [Double] = []
+//    @Published var heartRateHistory: [Double] = [89,79,89,90,93,94,95,93,85,79]
+    @Published var heartRateHistory: [Double] = []
     
     private let healthStore = HKHealthStore()
     private var anchor: HKQueryAnchor?
