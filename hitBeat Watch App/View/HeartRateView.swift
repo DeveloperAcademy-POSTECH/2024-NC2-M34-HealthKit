@@ -26,19 +26,19 @@ struct HeartRateView: View {
             if Int(heartRateManager.heartRate) < minRate{
                 
                 
-                Circle()
-                    .fill(.hitYellow)
-                    .frame(height: 50)
+                Image("sym1")
+                    .resizable()
+                    .frame(width: 50,height: 50)
             } else{
                 if Int(heartRateManager.heartRate) > maxRate {
                     
-                    Circle()
-                        .fill(.hitRed)
-                        .frame(height: 50)
+                    Image("sym3")
+                        .resizable()
+                        .frame(width: 50,height: 50)
                 } else{
-                    Circle()
-                        .fill(.hitBlue)
-                        .frame(height: 50)
+                    Image("sym2")
+                        .resizable()
+                        .frame(width: 50,height: 50)
                 }
             }
             
@@ -59,7 +59,7 @@ struct HeartRateView: View {
             if Int(heartRateManager.heartRate) < minRate{
                 
                 
-                Text("잠시만요!")
+                Text("심박수가 목표치보다 낮아요!")
                     .font(.caption2)
                 Text("심박수를 조금 더 올려주세요.")
                     .font(.caption2)

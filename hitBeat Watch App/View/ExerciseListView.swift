@@ -23,7 +23,7 @@ struct ExerciseListView: View {
 
         NavigationStack {
             List(exerciseLists) { exercise in
-                NavigationLink(destination: ExerciseResultView(maxRate: Int(round(Float(highHeart) * (exercise.maxpercent))), minRate:  Int(round(Float(highHeart) * (exercise.minpercent))),item: exercise.name)) 
+                NavigationLink(destination: ExerciseResultView(maxRate: Int(round(Float(highHeart) * (exercise.maxpercent))), minRate:  Int(round(Float(highHeart) * (exercise.minpercent))),item: exercise.name, exerciseImage: exercise.exerciseImage)) 
                 {
                     HStack(spacing: 0){
                         Image(exercise.exerciseImage)

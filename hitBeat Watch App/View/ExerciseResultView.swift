@@ -19,15 +19,16 @@ struct ExerciseResultView: View {
     var maxRate: Int
     var minRate: Int
     var item: String
+    var exerciseImage: String
     
     var body: some View {
         
         NavigationStack {
             VStack {
                 VStack {
-                    Circle()
-                        .fill(.gray)
-                        .frame(height: 50)
+                    Image(exerciseImage)
+                        .resizable()
+                        .frame(width: 40,height: 40)
                         .padding()
                     
                     Text("\(item)")
@@ -76,5 +77,5 @@ struct ExerciseResultView: View {
 }
 
 #Preview {
-    ExerciseResultView(maxRate: 200, minRate: 120, item: "운동능력")
+    ExerciseResultView(maxRate: 200, minRate: 120, item: "운동능력", exerciseImage: "photo1")
 }
