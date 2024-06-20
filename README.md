@@ -1,8 +1,8 @@
-# 2024-NC2-M0-AugmentedReality
+# 2024-NC2-M34-HealthKit
 ## 🎥 Youtube Link
 (추후 만들어진 유튜브 링크 추가)
 
-## 💡 About Augmented Reality
+## 💡 About HealthKit
 > 💪HealthKit은 사용자의 개인 정보 보호 및 제어를 유지하면서 건강 및 피트니스 데이터에 엑세스하고 공유는 프레임워크
 - 개인 정보 보호 및 제어 : 각 앱이 어떤 건강 데이터에 접근 할 수 있는지 직접 선택 또는 변경 가능
 - 종합 건강 데이터 관리 : 사용자의 다양한 건강 및 피트니스 데이터를 한 곳에 통합관리
