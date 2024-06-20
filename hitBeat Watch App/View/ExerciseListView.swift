@@ -29,8 +29,8 @@ struct ExerciseListView: View {
                         Image(exercise.exerciseImage)
                             .resizable()
                             .frame(width: 24,height: 24)
-                            .padding()
-                            .padding(.trailing)
+                            .padding(.trailing,2)
+                            .padding(.horizontal)
                         
                         VStack(alignment: .leading, spacing: 0){
                             Text(exercise.comment)

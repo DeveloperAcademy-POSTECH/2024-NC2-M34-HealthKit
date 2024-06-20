@@ -47,7 +47,7 @@ struct HeartRateView: View {
                 
             HStack(alignment: .bottom){
                 Text("\(Int(round(heartRateManager.heartRate)))")
-                    .font(.title2)
+                    .font(.title)
                     .bold()
                     .foregroundColor(.hitRed)
                 
@@ -60,25 +60,25 @@ struct HeartRateView: View {
                 
                 
                 Text("심박수가 목표치보다 낮아요!")
-                    .font(.caption2)
+                    .font(.footnote)
                 Text("심박수를 조금 더 올려주세요.")
-                    .font(.caption2)
+                    .font(.footnote)
                 
                 CustomSlider(value: $min, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
             } else{
                 if Int(heartRateManager.heartRate) > maxRate {
                     
                     Text("심박수가 기본보다 높아요!")
-                        .font(.caption2)
+                        .font(.footnote)
                     Text("심박수를 낮춰주세요.")
-                        .font(.caption2)
+                        .font(.footnote)
                     
                     CustomSlider(value: $max, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
                 } else{
                     Text("좋아요.")
-                        .font(.caption2)
+                        .font(.footnote)
                     Text("지금의 상태를 유지하세요.")
-                        .font(.caption2)
+                        .font(.footnote)
                     
                     CustomSlider(value: $heartRateManager.heartRate, range: Double(minRate)...Double(maxRate),max: maxRate, min: minRate)
                 }

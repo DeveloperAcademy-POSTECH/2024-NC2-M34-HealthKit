@@ -39,13 +39,13 @@ struct ContentView: View {
                                 ZStack{
                                     Circle()
                                         .fill(.backRed)
-                                        .frame(width: 40,height: 40)
+                                        .frame(width: 36,height: 36)
                                     
                                     Image(systemName: "minus")
                                 }
                             }
                             .buttonStyle(PlainButtonStyle())
-                            .padding(.horizontal)
+//                            .padding(.horizontal)
                             
                             Spacer()
                             
@@ -54,7 +54,7 @@ struct ContentView: View {
                                 .offset(CGSize(width: -2, height: -5))
                             
                             Text("\(age)")
-                                .font(.title2)
+                                .font(.title)
                             
                             Text("세")
                                 .font(.footnote)
@@ -68,13 +68,13 @@ struct ContentView: View {
                                 ZStack{
                                     Circle()
                                         .fill(.backRed)
-                                        .frame(width: 40,height: 40)
+                                        .frame(width: 36,height: 36)
                                     
                                     Image(systemName: "plus")
                                 }
                             }
                             .buttonStyle(PlainButtonStyle())
-                            .padding(.horizontal)
+//                            .padding(.horizontal)
                             
                         }
                         .padding(.bottom,44)

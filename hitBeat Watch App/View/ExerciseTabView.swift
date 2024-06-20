@@ -31,7 +31,7 @@ struct ExerciseTabView: View {
         
     
             TabView {
-                VStack{
+                VStack(spacing: 0){
                     HStack{
                         Text("총 운동시간")
                             .font(.footnote)
@@ -43,11 +43,12 @@ struct ExerciseTabView: View {
                             .foregroundColor(.hitYellow)
                     }
                     .padding()
-                    .padding(.top,34)
+                    .padding(.top,2)
                     HeartRateView(maxRate: maxRate, minRate: minRate, item: item)
                         .environmentObject(stopwatchManager)
                         .environmentObject(stopstopwatchManager)
                         .environmentObject(heartRateManager)
+//                        .frame(width: 400,height: 160)
                 }
                 .tabItem {
                     Image(systemName: "circle")
